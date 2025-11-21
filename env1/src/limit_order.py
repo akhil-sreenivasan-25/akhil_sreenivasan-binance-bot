@@ -1,5 +1,7 @@
 from binance.client import Client
+import logging
 
+logger = logging.getLogger(__name__)
 def place_limit_order(client,symbol,quantity,side,price):
     try:
         if side.upper() == 'BUY':
@@ -21,8 +23,10 @@ def place_limit_order(client,symbol,quantity,side,price):
                 price=price
             )
         else:
+            logger.error(f"Invalid side provided for limit order: {side}")
             return "Invalid side. Please use 'BUY' or 'SELL'."
-        
+        logger.info(f"Limit order placed successfully: {order}")
         return order
     except Exception as e:
+        logger.error(f"An error occurred while placing limit order: {e}")
         return f"An error occurred while placing market order: {e}"

@@ -35,7 +35,12 @@ LOGGING_CONFIG = {
             "level": "DEBUG",
             "propagate": False,
         }
+    },
+    "root": {
+    "handlers": ["console", "file"],
+    "level": "DEBUG",
     }
+
 }
 
 def setup_logging():

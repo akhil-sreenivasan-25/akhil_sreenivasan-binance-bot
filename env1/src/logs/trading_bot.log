@@ -1,0 +1,81 @@
+2025-11-21 19:16:52,434 | INFO | TradingBot | main.py:10 | Starting Trading Bot
+2025-11-21 19:16:53,257 | INFO | TradingBot | main.py:14 | Binance Testnet connection successful.
+2025-11-21 19:16:53,521 | INFO | TradingBot | main.py:17 | BTC Balance: {'asset': 'BTC', 'free': '1.00130000', 'locked': '0.00000000'}
+2025-11-21 19:16:54,171 | DEBUG | TradingBot | main.py:24 | Available symbols loaded : 1606 symblos
+2025-11-21 19:18:27,262 | INFO | TradingBot | main.py:10 | Starting Trading Bot
+2025-11-21 19:18:28,534 | INFO | TradingBot | main.py:14 | Binance Testnet connection successful.
+2025-11-21 19:18:28,835 | INFO | TradingBot | main.py:17 | BTC Balance: {'asset': 'BTC', 'free': '1.00130000', 'locked': '0.00000000'}
+2025-11-21 19:18:29,541 | DEBUG | TradingBot | main.py:24 | Available symbols loaded : 1606 symblos
+2025-11-21 19:27:01,614 | INFO | TradingBot | main.py:10 | Starting Trading Bot
+2025-11-21 19:27:02,897 | INFO | TradingBot | main.py:14 | Binance Testnet connection successful.
+2025-11-21 19:27:03,064 | INFO | TradingBot | main.py:17 | BTC Balance: {'asset': 'BTC', 'free': '1.00130000', 'locked': '0.00000000'}
+2025-11-21 19:27:03,537 | DEBUG | TradingBot | main.py:24 | Available symbols loaded : 1606 symblos
+2025-11-21 19:30:49,597 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 19:30:50,886 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 19:30:51,187 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 19:34:58,264 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 83943.84000000
+2025-11-21 19:35:16,385 | INFO | TradingBot | main.py:40 | Market order placed: {'symbol': 'BTCUSDT', 'orderId': 3075569, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ8de688e3a57d1a77f83c9d', 'transactTime': 1763733915936, 'price': '0.00000000', 'origQty': '0.00010000', 'executedQty': '0.00010000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '8.38376900', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1763733915936, 'fills': [{'price': '83837.69000000', 'qty': '0.00010000', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 1101056}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2025-11-21 19:36:55,552 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 19:36:56,130 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 19:36:56,433 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 19:37:04,012 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 83966.07000000
+2025-11-21 19:37:17,811 | INFO | TradingBot | main.py:40 | Market order placed: An error occurred while placing market order: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-11-21 19:37:17,812 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 19:49:28,950 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 19:49:29,905 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 19:49:30,617 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 19:49:41,857 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 83642.93000000
+2025-11-21 19:49:50,660 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:27:07,840 | WARNING | TradingBot | main.py:31 | Invalid trading pair entered: BTUUSDT
+2025-11-21 20:27:42,218 | WARNING | TradingBot | main.py:69 | Invalid choice entered, exiting.
+2025-11-21 20:27:50,009 | WARNING | TradingBot | main.py:69 | Invalid choice entered, exiting.
+2025-11-21 20:28:00,399 | WARNING | TradingBot | main.py:31 | Invalid trading pair entered: HJJJ
+2025-11-21 20:28:26,237 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 85096.51000000
+2025-11-21 20:28:45,975 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:36:16,290 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 20:36:23,079 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 20:36:25,754 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 20:36:32,187 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 84748.97000000
+2025-11-21 20:36:42,846 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:38:29,672 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 20:38:30,279 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 20:38:30,650 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 20:38:35,369 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 84338.57000000
+2025-11-21 20:38:42,333 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:39:25,441 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 84464.90000000
+2025-11-21 20:39:30,057 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:53:50,755 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 84030.91000000
+2025-11-21 20:54:00,247 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 20:55:59,191 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 84122.53000000
+2025-11-21 20:57:05,596 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Read timed out. (read timeout=10)
+2025-11-21 20:59:46,437 | WARNING | TradingBot | main.py:31 | Invalid trading pair entered: BTUSDT
+2025-11-21 20:59:54,599 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 83636.38000000
+2025-11-21 21:00:01,689 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 21:00:58,060 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 21:00:59,622 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 21:01:00,693 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 21:01:02,319 | WARNING | TradingBot | main.py:69 | Invalid choice entered, exiting.
+2025-11-21 21:01:08,840 | INFO | TradingBot | main.py:35 | Placing market order for BTCUSDT current price at 83662.69000000
+2025-11-21 21:01:16,616 | ERROR | TradingBot | main.py:43 | An error occurred while placing market order: string indices must be integers, not 'str'
+2025-11-21 21:02:22,256 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 83808.33000000
+2025-11-21 21:02:45,091 | INFO | TradingBot | main.py:60 | Limit order placed: An error occurred while placing market order: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-11-21 21:07:43,682 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 21:07:44,907 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 21:07:45,933 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 21:07:53,509 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 83197.35000000
+2025-11-21 21:17:11,560 | INFO | TradingBot | main.py:12 | Starting Trading Bot
+2025-11-21 21:17:11,561 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-21 21:17:11,563 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-21 21:17:12,206 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-21 21:17:12,207 | INFO | TradingBot | main.py:15 | Binance Testnet connection successful.
+2025-11-21 21:17:12,593 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-21 21:17:12,751 | DEBUG | TradingBot | main.py:21 | Available symbols loaded : 1606 symblos
+2025-11-21 21:17:21,909 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-21 21:17:21,912 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 83343.77000000
+2025-11-21 21:17:45,050 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 77
+2025-11-21 21:17:45,052 | ERROR | limit_order | limit_order.py:31 | An error occurred while placing limit order: APIError(code=-2010): Account has insufficient balance for requested action.
+2025-11-21 21:21:30,629 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-21 21:21:30,631 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 83112.36000000
+2025-11-21 21:23:26,643 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-21 21:23:26,645 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 82854.88000000
+2025-11-21 21:23:38,989 | ERROR | limit_order | limit_order.py:26 | Invalid side provided for limit order: HJHKJ
