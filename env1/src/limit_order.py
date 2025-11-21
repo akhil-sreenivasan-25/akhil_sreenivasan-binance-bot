@@ -1,24 +1,25 @@
 from binance.client import Client
 
-def place_market_order(client,symbol,quantity,side):
+def place_limit_order(client,symbol,quantity,side,price):
     try:
         if side.upper() == 'BUY':
-            # print("Placing BUY market order"+str(symbol)+str(quantity)+str(client.get_asset_balance('BTC')))
             order = client.create_order(
                 symbol=symbol,
                 side=Client.SIDE_BUY,
-                type=Client.ORDER_TYPE_MARKET,
-                quantity=quantity
+                type=Client.ORDER_TYPE_LIMIT,
+                timeInForce=Client.TIME_IN_FORCE_GTC,
+                quantity=quantity,
+                price=price
             )
-            print(order)
         elif side.upper() == 'SELL':
             order = client.create_order(
                 symbol=symbol,
                 side=Client.SIDE_SELL,
-                type=Client.ORDER_TYPE_MARKET,
-                quantity=quantity
+                type=Client.ORDER_TYPE_LIMIT,
+                timeInForce=Client.TIME_IN_FORCE_GTC,
+                quantity=quantity,
+                price=price
             )
-            print(order)
         else:
             return "Invalid side. Please use 'BUY' or 'SELL'."
         

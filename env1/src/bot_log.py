@@ -1,0 +1,43 @@
+import logging
+import logging.config
+import os
+
+# Ensure logs directory exists
+os.makedirs("logs", exist_ok=True)
+
+LOGGING_CONFIG = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "standard": {
+            "format": "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+        },
+        "detailed": {
+            "format": "%(asctime)s | %(levelname)s | %(name)s | %(filename)s:%(lineno)d | %(message)s"
+        },
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "standard",
+            "level": "INFO",
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "formatter": "detailed",
+            "filename": "logs/trading_bot.log",
+            "level": "DEBUG",
+        },
+    },
+    "loggers": {
+        "TradingBot": {
+            "handlers": ["console", "file"],
+            "level": "DEBUG",
+            "propagate": False,
+        }
+    }
+}
+
+def setup_logging():
+    logging.config.dictConfig(LOGGING_CONFIG)
+    return logging.getLogger("TradingBot")
