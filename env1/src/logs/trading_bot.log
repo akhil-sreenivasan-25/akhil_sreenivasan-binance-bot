@@ -79,3 +79,157 @@
 2025-11-21 21:23:26,643 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
 2025-11-21 21:23:26,645 | INFO | TradingBot | main.py:54 | Placing limit order for BTCUSDT current price at 82854.88000000
 2025-11-21 21:23:38,989 | ERROR | limit_order | limit_order.py:26 | Invalid side provided for limit order: HJHKJ
+2025-11-21 23:56:41,347 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-21 23:56:41,347 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-21 23:56:41,350 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-21 23:56:42,308 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-21 23:56:42,309 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-21 23:56:42,938 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-21 23:56:42,993 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-21 23:56:57,014 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-21 23:56:57,016 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 83808.79000000
+2025-11-21 23:58:01,018 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-21 23:58:01,019 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-21 23:59:30,258 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-21 23:59:30,259 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-21 23:59:30,261 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-21 23:59:31,087 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-21 23:59:31,088 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-21 23:59:31,399 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-21 23:59:31,492 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-21 23:59:38,287 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-21 23:59:38,289 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84075.15000000
+2025-11-22 00:00:17,327 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:00:17,328 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-1013): Filter failure: PERCENT_PRICE_BY_SIDE
+2025-11-22 00:01:35,070 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:01:35,071 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:01:35,072 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:01:35,762 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:01:35,763 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:01:36,204 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:01:36,358 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:01:46,123 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 00:01:46,125 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84213.87000000
+2025-11-22 00:02:16,680 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:02:16,682 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 00:03:48,753 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:03:48,754 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:03:48,755 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:03:49,636 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:03:49,636 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:03:50,121 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:03:50,248 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:04:07,319 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:04:07,320 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:04:07,321 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:04:08,038 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:04:08,039 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:04:08,358 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:04:08,441 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:04:15,215 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 00:04:15,217 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84261.89000000
+2025-11-22 00:04:55,715 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:04:55,717 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 00:20:18,807 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:20:18,807 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:20:18,809 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:20:19,607 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:20:19,607 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:20:19,776 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:20:20,006 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:20:36,884 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 00:20:36,884 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 85000.00000000
+2025-11-22 00:21:26,323 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:21:26,324 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 00:21:36,700 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:21:36,701 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:21:36,702 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:21:37,360 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:21:37,362 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:21:37,848 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:21:37,969 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:21:46,520 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 00:21:46,522 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84822.73000000
+2025-11-22 00:23:23,757 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:23:23,758 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 00:23:30,098 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 00:23:30,099 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 00:23:30,101 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 00:23:30,957 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 00:23:30,958 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 00:23:31,289 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 00:23:31,363 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 00:23:36,876 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 00:23:36,878 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84810.10000000
+2025-11-22 00:24:00,088 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 00:24:00,090 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 10:32:15,027 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 10:32:15,030 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 10:32:15,037 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 10:32:16,602 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 10:32:16,605 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 10:32:17,160 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 10:32:17,450 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 10:32:44,783 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 10:32:44,787 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84153.07000000
+2025-11-22 10:34:21,721 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 10:34:21,724 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 10:48:50,210 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 10:48:50,211 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 10:48:50,215 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 10:48:51,677 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 10:48:51,679 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 10:48:51,985 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 10:48:52,127 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 10:49:00,071 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 10:49:00,075 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 84039.99000000
+2025-11-22 10:54:06,333 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 10:54:06,335 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 10:54:06,341 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 10:54:07,358 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 10:54:07,359 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 10:54:07,647 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 10:54:07,800 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 10:54:13,391 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 10:54:13,393 | INFO | TradingBot | baseapp.py:73 | Placing sstop limit order for BTCUSDT current price at 83924.00000000
+2025-11-22 10:54:48,811 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 200 134
+2025-11-22 10:54:48,811 | INFO | stop_limit_order | stop_limit_order.py:30 | Stop limit order placed successfully: {'symbol': 'BTCUSDT', 'orderId': 3265371, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ47cdda554c7f8d6be2d91', 'transactTime': 1763789088416}
+2025-11-22 11:45:15,591 | INFO | TradingBot | baseapp.py:13 | Starting Trading Bot
+2025-11-22 11:45:15,595 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 11:45:15,601 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 11:45:16,484 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 11:45:16,485 | INFO | TradingBot | baseapp.py:16 | Binance Testnet connection successful.
+2025-11-22 11:45:16,784 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 11:45:16,899 | DEBUG | TradingBot | baseapp.py:22 | Available symbols loaded : 1606 symblos
+2025-11-22 11:45:23,963 | WARNING | TradingBot | baseapp.py:70 | Invalid trading pair entered: BTC
+2025-11-22 13:03:05,520 | INFO | TradingBot | baseapp.py:14 | Starting Trading Bot
+2025-11-22 13:03:05,520 | DEBUG | asyncio | proactor_events.py:631 | Using proactor: IocpProactor
+2025-11-22 13:03:05,522 | DEBUG | urllib3.connectionpool | connectionpool.py:1049 | Starting new HTTPS connection (1): testnet.binance.vision:443
+2025-11-22 13:03:06,341 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/1.1" 200 2
+2025-11-22 13:03:06,343 | INFO | TradingBot | baseapp.py:17 | Binance Testnet connection successful.
+2025-11-22 13:03:06,647 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/exchangeInfo HTTP/1.1" 200 56657
+2025-11-22 13:03:06,748 | DEBUG | TradingBot | baseapp.py:23 | Available symbols loaded : 1606 symblos
+2025-11-22 13:03:19,137 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 13:03:19,140 | INFO | TradingBot | baseapp.py:109 | Placing OCO order for BTCUSDT current price at 85927.80000000
+2025-11-22 13:07:27,983 | DEBUG | urllib3.connectionpool | connectionpool.py:289 | Resetting dropped connection: testnet.binance.vision
+2025-11-22 13:07:28,884 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/orderList/oco HTTP/1.1" 400 98
+2025-11-22 13:07:28,893 | ERROR | oco | oco.py:34 | An error occurred while placing OCO order: APIError(code=-1102): Mandatory parameter 'aboveType' was not sent, was empty/null, or malformed.
+2025-11-22 13:07:28,895 | ERROR | TradingBot | baseapp.py:133 | An error occurred : string indices must be integers, not 'str'
+2025-11-22 13:52:06,775 | DEBUG | urllib3.connectionpool | connectionpool.py:289 | Resetting dropped connection: testnet.binance.vision
+2025-11-22 13:52:07,963 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 13:52:07,970 | INFO | TradingBot | baseapp.py:56 | Placing limit order for BTCUSDT current price at 84273.54000000
+2025-11-22 13:52:14,963 | ERROR | TradingBot | baseapp.py:64 | An error occurred: could not convert string to float: 'buy'
+2025-11-22 13:52:58,648 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 13:52:58,650 | INFO | TradingBot | baseapp.py:56 | Placing limit order for BTCUSDT current price at 84277.73000000
+2025-11-22 13:53:33,974 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 200 286
+2025-11-22 13:53:33,977 | INFO | limit_order | limit_order.py:28 | Limit order placed successfully: {'symbol': 'BTCUSDT', 'orderId': 3297830, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ61c896e29066b03cdae33f', 'transactTime': 1763799813773, 'price': '84200.00000000', 'origQty': '0.00100000', 'executedQty': '0.00000000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '0.00000000', 'status': 'NEW', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'BUY', 'workingTime': 1763799813773, 'fills': [], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2025-11-22 13:55:38,283 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 13:55:38,286 | INFO | TradingBot | baseapp.py:75 | Placing stop limit order for BTCUSDT current price at 84345.16000000
+2025-11-22 13:56:48,528 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 400 60
+2025-11-22 13:56:48,530 | ERROR | stop_limit_order | stop_limit_order.py:33 | An error occurred while placing stop limit order: APIError(code=-2010): Stop price would trigger immediately.
+2025-11-22 13:56:48,532 | ERROR | TradingBot | baseapp.py:98 | An error occurred : string indices must be integers, not 'str'
+2025-11-22 13:57:38,905 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "GET /api/v3/ticker/price?symbol=BTCUSDT HTTP/1.1" 200 45
+2025-11-22 13:57:38,908 | INFO | TradingBot | baseapp.py:75 | Placing stop limit order for BTCUSDT current price at 84257.30000000
+2025-11-22 13:58:36,043 | DEBUG | urllib3.connectionpool | connectionpool.py:544 | https://testnet.binance.vision:443 "POST /api/v3/order HTTP/1.1" 200 135
+2025-11-22 13:58:36,045 | INFO | stop_limit_order | stop_limit_order.py:30 | Stop limit order placed successfully: {'symbol': 'BTCUSDT', 'orderId': 3298374, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ94abfd55d58274caf50c2f', 'transactTime': 1763800115997}
+2025-11-22 13:58:36,053 | ERROR | TradingBot | baseapp.py:98 | An error occurred : 'status'
