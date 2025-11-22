@@ -11,7 +11,6 @@ def place_market_order(client,symbol,quantity,side):
                 type=Client.ORDER_TYPE_MARKET,
                 quantity=quantity
             )
-            print(order)
         elif side.upper() == 'SELL':
             order = client.create_order(
                 symbol=symbol,
@@ -19,7 +18,6 @@ def place_market_order(client,symbol,quantity,side):
                 type=Client.ORDER_TYPE_MARKET,
                 quantity=quantity
             )
-            print(order)
         else:
             logger.error(f"Invalid side provided for Market order: {side}")
             return "Invalid side. Please use 'BUY' or 'SELL'."

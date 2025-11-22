@@ -27,9 +27,9 @@ def place_oco_order(client, symbol, quantity, side, price, stop_price, stop_limi
             )
         else:
             logger.error(f"Invalid side provided for OCO order: {side}")
-            return "Invalid side. Please use 'BUY' or 'SELL'."
+            raise ValueError("Invalid side. Please use 'BUY' or 'SELL'.")
         logger.info(f"OCO order placed successfully: {order}")
         return order
     except Exception as e:
         logger.error(f"An error occurred while placing OCO order: {e}")
-        return f"An error occurred while placing OCO order: {e}"
+        raise
