@@ -6,24 +6,41 @@ from advanced.stop_limit_order import place_stop_limit_order
 from bot_log import setup_logging
 
 logger = setup_logging()
+# login to binance testnet with user provided credentials or default credentials
+while True:
+    user = input("Login to new user (y/n for default user): ").upper()   
+    if user == 'Y':
+        api_key = input("Enter API Key: ")
+        api_secret = input("Enter API Secret: ")
+        try:
+            bot = BasicBot(api_key=api_key, api_secret=api_secret)
+            if bot.client.get_account():
+                logger.info("Binance Testnet connection successful.")
+                print("Connected successfully with new user.")
+                break
+        except Exception as e:
+            logger.error("Binance Testnet connection failed : " + str(e))
+            print(f"Connection failed: Try again.")         
+    elif user == 'N':
+        try:
+            bot = BasicBot()
+            if bot.client.get_account():
+                logger.info("Binance Testnet connection successful.")
+                print("Connected successfully with default account.")
+                break
+        except Exception as e:
+            logger.error("Binance Testnet connection failed : " + str(e))
+            print(f"Connection failed: Try again.")          
+    else:
+        logger.warning("Invalid input for user login.")
+        print("Invalid input. Please enter 'y' or 'n'.")
 
-# bot = BasicBot(api_key='3Ky0TSOXuYJrg6touX5gAKwoac8106VhQ1FooTAncsla5RoALjEfr9qGGIzUF56k',
-#                api_secret='s6b0mo3gO3IIZKdGjo0pGgbPYTTS84EJRxq7hO0Ah81btVP7MyuiiiqwaziTUN3q')
-
-try:
-    logger.info("Starting Trading Bot")
-    bot=BasicBot()
-    if bot.client:
-        logger.info("Binance Testnet connection successful.")
-except Exception as e:
-    logger.error(f"An error occurred while connecting: {e}")
-    print(f"An error occurred: {e}")
 choice = None
 symbols = [s['symbol'] for s in bot.client.get_exchange_info()['symbols']]
 logger.debug(f"Available symbols loaded : {len(symbols)} symblos")
 
 while choice != '8':
-    print("1. place market order \n2. place limit order \n3. stop limit order \n4. OCO order 8.exit")
+    print("1. place market order \n2. place limit order \n3. stop limit order \n4. OCO order \n5. Trading history \n8. exit/any other key")
     choice = input("Enter your choice: ")
     # Market Order
     if choice == '1':
@@ -80,7 +97,7 @@ while choice != '8':
             pair= str(input("Enter trading pair (e.g., BTCUSDT): ")).upper()
             if pair not in symbols:
                 logger.warning(f"Invalid trading pair entered: {pair}")
-                print("Invalid trading pair! Please enter a valid Binance symbol."+str(pair))
+                print("Invalid trading pair! Please enter a valid Binance pair."+str(pair))
             else:
                 current_price= float(bot.client.get_symbol_ticker(symbol=pair)['price'])
                 logger.info(f"Placing stop limit order for {pair} current price at {current_price}")
@@ -157,11 +174,26 @@ while choice != '8':
                 print("Order placed:", order['orderId'])
         except Exception as e:
             print(f"An error occurred: {e}")
-
+    # Trading History
+    elif choice == '5':
+        try:
+            pair=input("Enter pair to view trading history (e.g., BTCUSDT): ").upper()
+            logger.info(f"Fetching trading history for pair: {pair}")
+            if pair not in symbols:
+                logger.warning(f"Invalid trading pair entered: {pair}")
+                print("Invalid trading pair! Please enter a valid Binance pair."+str(pair))
+            else:
+                open_orders = bot.client.get_my_trades(symbol=pair)
+                for order in open_orders:
+                    print(f"Symbol: {order['symbol']},Price: {order['price']}, Qty: {order['qty']}, ")
+        except Exception as e:
+            logger.error(f"An error occurred while fetching trading history: {e}")
+            print(f"An error occurred: {e}")
+    # Exit
     elif choice == '8':
         logger.info("Exiting Trading Bot")
         print("Exiting...")
     else:
         logger.warning("Invalid choice entered, exiting.")
         print("Exiting...")
-        # exit()
+        exit()

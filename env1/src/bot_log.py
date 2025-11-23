@@ -3,7 +3,7 @@ import logging.config
 import os
 
 # Ensure logs directory exists
-os.makedirs("logs", exist_ok=True)
+os.makedirs("log", exist_ok=True)
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -25,7 +25,7 @@ LOGGING_CONFIG = {
         "file": {
             "class": "logging.FileHandler",
             "formatter": "detailed",
-            "filename": "logs/trading_bot.log",
+            "filename": "log/trading_bot.log",
             "level": "DEBUG",
         },
     },
