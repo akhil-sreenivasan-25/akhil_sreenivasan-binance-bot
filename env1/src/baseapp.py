@@ -39,8 +39,8 @@ choice = None
 symbols = [s['symbol'] for s in bot.client.get_exchange_info()['symbols']]
 logger.debug(f"Available symbols loaded : {len(symbols)} symblos")
 
-while choice != '8':
-    print("1. place market order \n2. place limit order \n3. stop limit order \n4. OCO order \n5. Trading history \n8. exit/any other key")
+while choice != '5':
+    print("1. place market order \n2. place limit order \n3. stop limit order \n4. Trading history \n5. exit/any other key")
     choice = input("Enter your choice: ")
     # Market Order
     if choice == '1':
@@ -128,54 +128,55 @@ while choice != '8':
             logger.error(f"An error occurred : {e}")
             print(f"An error occurred: {e}")
     # OCO Order
-    elif choice == '4':
-        try:
-            pair= str(input("Enter trading pair (e.g., BTCUSDT): ")).upper()
-            if pair not in symbols:
-                logger.warning(f"Invalid trading pair entered: {pair}")
-                print("Invalid trading pair! Please enter a valid Binance symbol."+str(pair))
-            else:
-                current_price=float(bot.client.get_symbol_ticker(symbol=pair)['price'])
-                logger.info(f"Placing OCO order for {pair} current price at {current_price}")
-                print(f"Current price of {pair} is {current_price}")
-                quantity= float(input("Enter quantity to buy/sell: "))
-                side= str(input("Enter side (BUY/SELL): ")).upper()
-                price= float(input("Enter limit price: "))
-                while True:
-                    if side=='BUY' and price>=float(current_price):
-                        logger.warning("For BUY limit orders, limit price must be less than current price.")
-                        print("For BUY limit orders, limit price must be less than current price. Please re-enter.")
-                        price= float(input("Enter limit price: "))
-                    elif side=='SELL' and price<=float(current_price):
-                        logger.warning("For SELL limit orders, limit price must be greater than current price.")
-                        print("For SELL limit orders, limit price must be greater than current price. Please re-enter.")
-                        price= float(input("Enter limit price: "))
-                    else:
-                        break            
-                limit_price= 0
-                stop_price=0
-                if side=='BUY':
-                    while True:
-                        stop_price= float(input("Enter stop price: "))
-                        limit_price= float(input("Enter limit price: "))
-                        if current_price > stop_price or stop_price>limit_price:
-                            print("For BUY limit orders, stop price must be less than limit price and current price must be less than both other prices. Please re-enter.")
-                        else:
-                            break
-                elif side=='SELL':
-                    while True:
-                        stop_price= float(input("Enter stop price: "))
-                        limit_price= float(input("Enter limit price: "))
-                        if current_price < stop_price or stop_price<limit_price:
-                            print("For SELL limit orders, stop price must be greater than limit price and current price must be greter than both other prices. Please re-enter.")
-                        else:
-                            break
-                order=place_oco_order(bot.client, pair, quantity, side, price, stop_price, limit_price)    
-                print("Order placed:", order['orderId'])
-        except Exception as e:
-            print(f"An error occurred: {e}")
+    # elif choice == '4':
+    #     try:
+    #         pair= str(input("Enter trading pair (e.g., BTCUSDT): ")).upper()
+    #         if pair not in symbols:
+    #             logger.warning(f"Invalid trading pair entered: {pair}")
+    #             print("Invalid trading pair! Please enter a valid Binance symbol."+str(pair))
+    #         else:
+    #             current_price=float(bot.client.get_symbol_ticker(symbol=pair)['price'])
+    #             logger.info(f"Placing OCO order for {pair} current price at {current_price}")
+    #             print(f"Current price of {pair} is {current_price}")
+    #             quantity= float(input("Enter quantity to buy/sell: "))
+    #             side= str(input("Enter side (BUY/SELL): ")).upper()
+    #             price= float(input("Enter limit price: "))
+    #             while True:
+    #                 if side=='BUY' and price>=float(current_price):
+    #                     logger.warning("For BUY limit orders, limit price must be less than current price.")
+    #                     print("For BUY limit orders, limit price must be less than current price. Please re-enter.")
+    #                     price= float(input("Enter limit price: "))
+    #                 elif side=='SELL' and price<=float(current_price):
+    #                     logger.warning("For SELL limit orders, limit price must be greater than current price.")
+    #                     print("For SELL limit orders, limit price must be greater than current price. Please re-enter.")
+    #                     price= float(input("Enter limit price: "))
+    #                 else:
+    #                     break            
+    #             limit_price= 0
+    #             stop_price=0
+    #             if side=='BUY':
+    #                 while True:
+    #                     stop_price= float(input("Enter stop price: "))
+    #                     limit_price= float(input("Enter limit price: "))
+    #                     if current_price > stop_price or stop_price>limit_price:
+    #                         print("For BUY limit orders, stop price must be less than limit price and current price must be less than both other prices. Please re-enter.")
+    #                     else:
+    #                         break
+    #             elif side=='SELL':
+    #                 while True:
+    #                     stop_price= float(input("Enter stop price: "))
+    #                     limit_price= float(input("Enter limit price: "))
+    #                     if current_price < stop_price or stop_price<limit_price:
+    #                         print("For SELL limit orders, stop price must be greater than limit price and current price must be greter than both other prices. Please re-enter.")
+    #                     else:
+    #                         break
+    #             order=place_oco_order(bot.client, pair, quantity, side, price, stop_price, limit_price)    
+    #             print("Order placed:", order['orderId'])
+    #     except Exception as e:
+    #         print(f"An error occurred: {e}")
+    
     # Trading History
-    elif choice == '5':
+    elif choice == '4':
         try:
             pair=input("Enter pair to view trading history (e.g., BTCUSDT): ").upper()
             logger.info(f"Fetching trading history for pair: {pair}")
@@ -190,7 +191,7 @@ while choice != '8':
             logger.error(f"An error occurred while fetching trading history: {e}")
             print(f"An error occurred: {e}")
     # Exit
-    elif choice == '8':
+    elif choice == '5':
         logger.info("Exiting Trading Bot")
         print("Exiting...")
     else:
